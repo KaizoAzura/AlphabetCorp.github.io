@@ -1,0 +1,172 @@
+@import "variable";
+@import "sidebar";
+
+.main-content {
+  overflow-x: hidden;
+  .navbar {
+    border-bottom: 0.5px solid lightgray;
+    .navbar-brand {
+      img {
+        width: 50%;
+      }
+    }
+
+    .navbar-nav {
+      .nav-item {
+        .nav-link {
+          color: black;
+          font-size: 1.25rem;
+        }
+      }
+    }
+  }
+
+  .profil-photo {
+    img {
+      width: 100px;
+    }
+  }
+
+  .welcome-text {
+    font-size: 2rem;
+    color: black;
+    font-weight: 300;
+  }
+
+  .warning-text {
+    color: gray;
+    font-weight: 300;
+    font-size: 0.9rem;
+  }
+
+  .card-column {
+    &.col-12 {
+      .card {
+        height: 300px;
+        overflow-y: auto;
+        .toggler-icon {
+          color: gray;
+          text-decoration: none;
+          font-size: 1.25rem;
+        }
+
+        .card-body {
+          .subsidiaries-nav {
+            .sub-item {
+              background-color: rgb(236, 236, 236);
+              margin: 0.5rem auto;
+              padding: 0.5rem;
+              border-radius: 0.25rem;
+              .sub-link {
+                color: black;
+                text-decoration: none;
+                img {
+                  width: 15%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// responsive
+
+@media screen and (min-width: 576px) {
+  .main-content {
+    .navbar {
+      .navbar-brand {
+        img {
+          width: 30%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .main-content {
+    .navbar {
+      .navbar-brand {
+        img {
+          width: 20%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .main-content {
+    margin-left: 245px;
+    width: calc(100% - 245px);
+    .navbar {
+      .navbar-brand {
+        display: none;
+      }
+
+      form {
+        background-color: rgb(246, 246, 246);
+        border-radius: 0.25rem;
+        width: 50%;
+        .btn {
+          background-color: transparent;
+          border: 0;
+          color: gray;
+
+          &:hover {
+            color: gray;
+          }
+        }
+
+        .form-control {
+          background-color: transparent;
+          color: gray;
+          border: 0;
+          padding-left: 0;
+          font-weight: 300;
+          font-size: 0.9rem;
+
+          &:focus {
+            box-shadow: none;
+            outline: none;
+            border: 0;
+          }
+
+          &::placeholder {
+            color: lightslategray;
+            font-size: 0.9rem;
+          }
+        }
+      }
+
+      .navbar-nav {
+        .nav-item {
+          .nav-link {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .card-column {
+      &.col-12 {
+        .card {
+          .card-body {
+            .subsidiaries-nav {
+              .sub-item {
+                .sub-link {
+                  img {
+                    width: 10%;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

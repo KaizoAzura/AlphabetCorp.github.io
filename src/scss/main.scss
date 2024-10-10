@@ -1,0 +1,178 @@
+@import "variable";
+@import "navbar";
+
+// style hero
+
+.hero {
+  padding: 6rem 1rem;
+  background-color: white;
+  min-height: 100vh;
+
+  img {
+    width: 35%;
+    box-shadow: 5px 5px 10px 0 rgb(200, 200, 200);
+  }
+
+  h1 {
+    font-weight: 300;
+    font-size: 2rem;
+
+    span {
+      color: red;
+    }
+  }
+
+  p {
+    color: black;
+    font-weight: 300;
+    font-size: 0.9rem;
+  }
+
+  //   accordion
+  .accordion {
+    .btn {
+      padding-left: 0;
+      color: red;
+      font-weight: 300;
+      font-size: 0.9rem;
+
+      &:focus {
+        border: 0;
+      }
+    }
+  }
+}
+
+footer {
+  background-color: whitesmoke;
+
+  .navbar {
+    background-color: transparent;
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .navbar-brand {
+        width: 100%;
+        margin: 1rem 0;
+        img {
+          width: 100%;
+        }
+      }
+
+      .navbar-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .nav-item {
+          .nav-link {
+            font-weight: 300;
+            color: gray;
+            font-size: 1rem;
+
+            &:hover {
+              color: black;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .copyright {
+    color: black;
+    font-weight: 300;
+  }
+}
+
+// responsive 576px
+@media screen and (min-width: 576px) {
+  .hero {
+    img {
+      width: 25%;
+    }
+  }
+  //   footer
+  footer {
+    .navbar {
+      .footer-content {
+        .navbar-brand {
+          width: 75%;
+          margin: auto;
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+// responsive 768px
+@media screen and (min-width: 768px) {
+  .hero {
+    img {
+      width: 20%;
+    }
+    p {
+      width: 80%;
+    }
+  }
+
+  footer {
+    .navbar {
+      .footer-content {
+        flex-direction: row;
+        .navbar-brand {
+          width: 50%;
+          margin: auto;
+          img {
+            width: 100%;
+          }
+        }
+
+        .navbar-nav {
+          width: 50%;
+        }
+      }
+    }
+  }
+}
+
+// responsive 992px
+@media screen and (min-width: 992px) {
+  .hero {
+    padding: 9rem 1rem 6rem 1rem;
+    img {
+      width: 10%;
+    }
+    p {
+      width: 50%;
+      font-size: 1rem;
+    }
+  }
+
+  footer {
+    .navbar {
+      .footer-content {
+        flex-direction: row;
+        .navbar-brand {
+          width: 15%;
+        }
+
+        .navbar-nav {
+          flex-direction: row;
+          width: 100%;
+          justify-content: end;
+
+          .nav-item {
+            .nav-link {
+              font-size: 0.9rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

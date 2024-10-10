@@ -1,0 +1,66 @@
+@import "variable";
+
+.navbar {
+  background-color: white;
+  border-bottom: 0.5px solid lightgray;
+
+  .navbar-brand {
+    width: 40%;
+    img {
+      width: 100%;
+    }
+  }
+
+  //   navbar nav
+  .navbar-nav {
+    .nav-item {
+      .nav-link {
+        font-size: 1.1rem;
+        font-weight: 400;
+        color: gray;
+
+        &:hover {
+          color: black;
+        }
+      }
+    }
+  }
+}
+
+// responsive 576px
+
+@media screen and (min-width: 576px) {
+  .navbar {
+    .navbar-brand {
+      width: 30%;
+    }
+  }
+}
+
+// responsive 768px
+
+@media screen and (min-width: 768px) {
+  .navbar {
+    .navbar-brand {
+      width: 25%;
+    }
+  }
+}
+
+// responsive 992px
+@media screen and (min-width: 992px) {
+  .navbar {
+    .navbar-brand {
+      width: 20%;
+    }
+  }
+}
+
+// responsive 1200px
+@media screen and (min-width: 1200px) {
+  .navbar {
+    .navbar-brand {
+      width: 15%;
+    }
+  }
+}

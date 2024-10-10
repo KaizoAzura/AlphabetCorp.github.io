@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+body {
+  font-family: "Kanit", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  color: gray;
+}
+
+body {
+  font-family: "Kanit", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  color: gray;
+}
+
+.sidebar {
+  transform: translateX(-100%);
+  transition: 0.3s ease-in-out;
+  background-color: white;
+  height: 100vh;
+  overflow-y: auto;
+  width: 75%;
+  border-right: 0.5px solid lightgray;
+}
+.sidebar.show {
+  transform: translateX(0);
+  transition: 0.3s ease-in-out;
+  box-shadow: 5px 0 10px rgba(211, 211, 211, 0.439);
+}
+.sidebar .navbar-brand {
+  width: 100%;
+}
+.sidebar .navbar-brand img {
+  width: 75%;
+}
+.sidebar .navbar-nav .nav-item .nav-link {
+  font-weight: 300;
+  font-size: 0.9rem;
+  color: gray;
+  border-radius: 0 2rem 2rem 0;
+  transition: 0.3s ease-in-out;
+  padding: 0.3rem 1rem;
+  margin-bottom: 0.5rem;
+}
+.sidebar .navbar-nav .nav-item .nav-link.active {
+  background-color: red;
+  color: white;
+}
+.sidebar .navbar-nav .nav-item .nav-link.active:hover {
+  color: white;
+}
+.sidebar .navbar-nav .nav-item .nav-link i {
+  margin-right: 1rem;
+  font-size: 1.1rem;
+}
+.sidebar .navbar-nav .nav-item .nav-link:hover {
+  color: black;
+}
+
+@media screen and (min-width: 576px) {
+  .sidebar {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .sidebar {
+    width: 35%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .sidebar {
+    width: 250px;
+    transform: translateX(0);
+  }
+}
+.main-content {
+  overflow-x: hidden;
+}
+.main-content .navbar {
+  border-bottom: 0.5px solid lightgray;
+}
+.main-content .navbar .navbar-brand img {
+  width: 50%;
+}
+.main-content .navbar .navbar-nav .nav-item .nav-link {
+  color: black;
+  font-size: 1.25rem;
+}
+.main-content .profil-photo img {
+  width: 100px;
+}
+.main-content .welcome-text {
+  font-size: 2rem;
+  color: black;
+  font-weight: 300;
+}
+.main-content .warning-text {
+  color: gray;
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+.main-content .card-column.col-12 .card {
+  height: 300px;
+  overflow-y: auto;
+}
+.main-content .card-column.col-12 .card .toggler-icon {
+  color: gray;
+  text-decoration: none;
+  font-size: 1.25rem;
+}
+.main-content .card-column.col-12 .card .card-body .subsidiaries-nav .sub-item {
+  background-color: rgb(236, 236, 236);
+  margin: 0.5rem auto;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+}
+.main-content .card-column.col-12 .card .card-body .subsidiaries-nav .sub-item .sub-link {
+  color: black;
+  text-decoration: none;
+}
+.main-content .card-column.col-12 .card .card-body .subsidiaries-nav .sub-item .sub-link img {
+  width: 15%;
+}
+
+@media screen and (min-width: 576px) {
+  .main-content .navbar .navbar-brand img {
+    width: 30%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .main-content .navbar .navbar-brand img {
+    width: 20%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .main-content {
+    margin-left: 245px;
+    width: calc(100% - 245px);
+  }
+  .main-content .navbar .navbar-brand {
+    display: none;
+  }
+  .main-content .navbar form {
+    background-color: rgb(246, 246, 246);
+    border-radius: 0.25rem;
+    width: 50%;
+  }
+  .main-content .navbar form .btn {
+    background-color: transparent;
+    border: 0;
+    color: gray;
+  }
+  .main-content .navbar form .btn:hover {
+    color: gray;
+  }
+  .main-content .navbar form .form-control {
+    background-color: transparent;
+    color: gray;
+    border: 0;
+    padding-left: 0;
+    font-weight: 300;
+    font-size: 0.9rem;
+  }
+  .main-content .navbar form .form-control:focus {
+    box-shadow: none;
+    outline: none;
+    border: 0;
+  }
+  .main-content .navbar form .form-control::-moz-placeholder {
+    color: lightslategray;
+    font-size: 0.9rem;
+  }
+  .main-content .navbar form .form-control::placeholder {
+    color: lightslategray;
+    font-size: 0.9rem;
+  }
+  .main-content .navbar .navbar-nav .nav-item .nav-link {
+    display: none;
+  }
+  .main-content .card-column.col-12 .card .card-body .subsidiaries-nav .sub-item .sub-link img {
+    width: 10%;
+  }
+}/*# sourceMappingURL=dashboard.css.map */

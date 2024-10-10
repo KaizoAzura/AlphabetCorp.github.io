@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+body {
+  font-family: "Kanit", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  color: gray;
+}
+
+.navbar {
+  background-color: white;
+  border-bottom: 0.5px solid lightgray;
+}
+.navbar .navbar-brand {
+  width: 40%;
+}
+.navbar .navbar-brand img {
+  width: 100%;
+}
+.navbar .navbar-nav .nav-item .nav-link {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: gray;
+}
+.navbar .navbar-nav .nav-item .nav-link:hover {
+  color: black;
+}
+
+@media screen and (min-width: 576px) {
+  .navbar .navbar-brand {
+    width: 30%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .navbar .navbar-brand {
+    width: 25%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .navbar .navbar-brand {
+    width: 20%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .navbar .navbar-brand {
+    width: 15%;
+  }
+}/*# sourceMappingURL=navbar.css.map */

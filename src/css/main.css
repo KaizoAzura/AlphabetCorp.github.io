@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+body {
+  font-family: "Kanit", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  color: gray;
+}
+
+body {
+  font-family: "Kanit", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  color: gray;
+}
+
+.navbar {
+  background-color: white;
+  border-bottom: 0.5px solid lightgray;
+}
+.navbar .navbar-brand {
+  width: 40%;
+}
+.navbar .navbar-brand img {
+  width: 100%;
+}
+.navbar .navbar-nav .nav-item .nav-link {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: gray;
+}
+.navbar .navbar-nav .nav-item .nav-link:hover {
+  color: black;
+}
+
+@media screen and (min-width: 576px) {
+  .navbar .navbar-brand {
+    width: 30%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .navbar .navbar-brand {
+    width: 25%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .navbar .navbar-brand {
+    width: 20%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .navbar .navbar-brand {
+    width: 15%;
+  }
+}
+.hero {
+  padding: 6rem 1rem;
+  background-color: white;
+  min-height: 100vh;
+}
+.hero img {
+  width: 35%;
+  box-shadow: 5px 5px 10px 0 rgb(200, 200, 200);
+}
+.hero h1 {
+  font-weight: 300;
+  font-size: 2rem;
+}
+.hero h1 span {
+  color: red;
+}
+.hero p {
+  color: black;
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+.hero .accordion .btn {
+  padding-left: 0;
+  color: red;
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+.hero .accordion .btn:focus {
+  border: 0;
+}
+
+footer {
+  background-color: whitesmoke;
+}
+footer .navbar {
+  background-color: transparent;
+}
+footer .navbar .footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer .navbar .footer-content .navbar-brand {
+  width: 100%;
+  margin: 1rem 0;
+}
+footer .navbar .footer-content .navbar-brand img {
+  width: 100%;
+}
+footer .navbar .footer-content .navbar-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer .navbar .footer-content .navbar-nav .nav-item .nav-link {
+  font-weight: 300;
+  color: gray;
+  font-size: 1rem;
+}
+footer .navbar .footer-content .navbar-nav .nav-item .nav-link:hover {
+  color: black;
+}
+footer .copyright {
+  color: black;
+  font-weight: 300;
+}
+
+@media screen and (min-width: 576px) {
+  .hero img {
+    width: 25%;
+  }
+  footer .navbar .footer-content .navbar-brand {
+    width: 75%;
+    margin: auto;
+  }
+  footer .navbar .footer-content .navbar-brand img {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero img {
+    width: 20%;
+  }
+  .hero p {
+    width: 80%;
+  }
+  footer .navbar .footer-content {
+    flex-direction: row;
+  }
+  footer .navbar .footer-content .navbar-brand {
+    width: 50%;
+    margin: auto;
+  }
+  footer .navbar .footer-content .navbar-brand img {
+    width: 100%;
+  }
+  footer .navbar .footer-content .navbar-nav {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .hero {
+    padding: 9rem 1rem 6rem 1rem;
+  }
+  .hero img {
+    width: 10%;
+  }
+  .hero p {
+    width: 50%;
+    font-size: 1rem;
+  }
+  footer .navbar .footer-content {
+    flex-direction: row;
+  }
+  footer .navbar .footer-content .navbar-brand {
+    width: 15%;
+  }
+  footer .navbar .footer-content .navbar-nav {
+    flex-direction: row;
+    width: 100%;
+    justify-content: end;
+  }
+  footer .navbar .footer-content .navbar-nav .nav-item .nav-link {
+    font-size: 0.9rem;
+  }
+}/*# sourceMappingURL=main.css.map */
