@@ -16,6 +16,7 @@
       href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
       rel="stylesheet"
     />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
   <body>
     <!-- sisi 1 -->
@@ -23,7 +24,7 @@
       <div class="container-fluid ps-0">
         <div class="row mb-4">
           <div class="col-12">
-            <a href="#" class="navbar-brand ms-3"
+            <a href="index.html" class="navbar-brand ms-3"
               ><img src="image/nav-logo.png" alt="Alphabet Logo"
             /></a>
           </div>
@@ -79,7 +80,7 @@
     </div>
 
     <!-- sisi 2 -->
-    <div class="container-fluid main-content px-0">
+    <div class="container-fluid main-content px-0 px-lg-3">
       <nav class="navbar navbar-expand">
         <div class="container-fluid">
           <a class="navbar-brand" href="#"
@@ -131,54 +132,173 @@
       </div>
 
       <!-- content -->
-
-      <div class="row my-3">
-        <div class="col-12 col-lg-6 card-column px-3 mb-3">
-          <div class="card mx-3">
-            <div class="card-header text-end">
-              <a href="#" class="toggler-icon"
-                ><i class="ri-fullscreen-fill"></i
-              ></a>
-            </div>
-            <div class="card-body">
-              <ol class="subsidiaries-nav">
-                <li class="sub-item">
-                  <a href="#" class="sub-link"
-                    ><img
-                      src="image/dashboard/microsoft-icon.png"
-                      alt="Microsoft"
-                      class="me-2"
-                    />Microsoft</a
-                  >
-                </li>
-                <li class="sub-item"><a href="#" class="sub-link"></a></li>
-                <li class="sub-item"><a href="#" class="sub-link"></a></li>
-                <li class="sub-item"><a href="#" class="sub-link"></a></li>
-                <li class="sub-item"><a href="#" class="sub-link"></a></li>
-              </ol>
+      <div class="container py-3 content">
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header bg-transparent">
+                <h4 class="mb-0 title-card">Revenue</h4>
+                <a href="#" class="head-link">View more</a>
+              </div>
+              <div class="card-body">
+                <div class="dashboard-section">
+                  <canvas id="combinedChart"></canvas>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+        <!-- row kedua -->
+        <div class="row my-3">
+          <div class="col-12 col-md-6">
+            <div class="card">
+              <div class="card-header bg-transparent">
+                <h4 class="mb-0 title-card">Sharestock Price</h4>
+                <a href="#" class="head-link">View more</a>
+              </div>
+              <div class="card-body">
+                <div class="dashboard-section">
+                  <canvas id="shareholdingChart"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- col kedua -->
+          <div class="col-12 col-md-6 mt-3 mt-md-0">
+            <div class="card">
+              <div class="card-header bg-transparent">
+                <h4 class="mb-0 title-card">Subsidiary</h4>
+                <a href="#" class="head-link">View more</a>
+              </div>
+              <div class="card-body px-1">
+                <div class="row px-4">
+                  <div class="col-12 my-1 link-container">
+                    <a href="#" class="card-link nav-link">
+                      <div class="sub-name d-flex align-items-center">
+                        <i class="ri-building-fill"></i>
+                        <h6 class="mb-0 ms-2">NOVA Corporation</h6>
+                      </div>
+                      <p class="mb-0"><i class="ri-arrow-up-s-fill"></i></p>
+                    </a>
+                  </div>
+                  <div class="col-12 my-1 link-container">
+                    <a href="#" class="card-link nav-link">
+                      <div class="sub-name d-flex align-items-center">
+                        <i class="ri-building-fill"></i>
+                        <h6 class="mb-0 ms-2">SpaceX</h6>
+                      </div>
+                      <p class="mb-0"><i class="ri-arrow-up-s-fill"></i></p>
+                    </a>
+                  </div>
+                  <div class="col-12 my-1 link-container">
+                    <a href="#" class="card-link nav-link">
+                      <div class="sub-name d-flex align-items-center">
+                        <i class="ri-building-fill"></i>
+                        <h6 class="mb-0 ms-2">Nox</h6>
+                      </div>
+                      <p class="mb-0"><i class="ri-arrow-up-s-fill"></i></p>
+                    </a>
+                  </div>
+                  <div class="col-12 my-1 link-container">
+                    <a href="#" class="card-link nav-link">
+                      <div class="sub-name d-flex align-items-center">
+                        <i class="ri-building-fill"></i>
+                        <h6 class="mb-0 ms-2">X Corporation</h6>
+                      </div>
+                      <p class="mb-0"><i class="ri-arrow-up-s-fill"></i></p>
+                    </a>
+                  </div>
+                  <div class="col-12 my-1 link-container">
+                    <a href="#" class="card-link nav-link">
+                      <div class="sub-name d-flex align-items-center">
+                        <i class="ri-building-fill"></i>
+                        <h6 class="mb-0 ms-2">BCA</h6>
+                      </div>
+                      <p class="mb-0"><i class="ri-arrow-up-s-fill"></i></p>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- row ketiga -->
+        <div class="row my-3">
+          <div class="col-12">
+            <div class="card h-100">
+              <div class="card-header bg-transparent">
+                <h4 class="mb-0 title-card">Blacklist</h4>
+                <a href="#" class="head-link">View more</a>
+              </div>
+              <div class="card-body">
+                <div class="row d-flex align-items-center">
+                  <div class="col-8 col-lg-6">
+                    <h3 class="mb-0">You have security recommendations</h3>
+                    <p class="mb-0 mt-2">
+                      Recommended actions are found in the Security Checkup
+                    </p>
+                  </div>
+                  <div class="col-4 col-lg-6 text-sm-center">
+                    <img
+                      src="image/dashboard/blacklist-shield.png"
+                      class="img-fluid"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- row keempat -->
+        <div class="row my-3">
+          <div class="col-12">
+            <div class="card h-100">
+              <div class="card-header bg-transparent">
+                <h4 class="mb-0 title-card">Looking for more information?</h4>
+              </div>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-12">
+                    <a
+                      href="#"
+                      class="d-flex align-items-center justify-content-between px-3 py-2 search-info"
+                      ><span
+                        ><i class="ri-search-2-line me-3"></i>Search For
+                        Career</span
+                      >
+                      <span><i class="ri-arrow-right-s-line"></i></span
+                    ></a>
+                    <a
+                      href="#"
+                      class="d-flex align-items-center justify-content-between px-3 py-2 search-info"
+                      ><span
+                        ><i class="ri-question-line me-3"></i>View help
+                        options</span
+                      >
+                      <span><i class="ri-arrow-right-s-line"></i></span
+                    ></a>
+                    <a
+                      href="#"
+                      class="d-flex align-items-center justify-content-between px-3 py-2 search-info"
+                      ><span
+                        ><i class="ri-feedback-line me-3"></i>Send
+                        feedback</span
+                      >
+                      <span><i class="ri-arrow-right-s-line"></i></span
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-        <div class="col-12 col-lg-6 card-column px-3 mb-3">
-          <div class="card mx-3">
-            <div class="card-header text-end">
-              <a href="#" class="toggler-icon"
-                ><i class="ri-fullscreen-fill"></i
-              ></a>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <h6 class="card-subtitle mb-2 text-body-secondary">
-                Card subtitle
-              </h6>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
-              <a href="#" class="card-link">Card link</a>
-              <a href="#" class="card-link">Another link</a>
-            </div>
+      <div class="container-fluid py-3">
+        <div class="row">
+          <div class="col-12 text-center">
+            <p class="mb-0">&copy; Alphabet Corporation 2024</p>
           </div>
         </div>
       </div>
@@ -191,5 +311,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="src/js/script.js"></script>
+    <script src="src/js/chart.js"></script>
   </body>
 </html>

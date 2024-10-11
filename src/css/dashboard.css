@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 body {
   font-family: "Kanit", sans-serif;
   margin: 0;
@@ -76,6 +77,29 @@ body {
     transform: translateX(0);
   }
 }
+body {
+  font-family: "Kanit", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  color: gray;
+}
+
+.card {
+  border: 0.5px solid lightgray;
+  color: black;
+  font-weight: 300;
+  border-radius: 0.25rem;
+}
+.card .card-header .title-card {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+.ri-arrow-up-s-fill {
+  color: green;
+}
+
 .main-content {
   overflow-x: hidden;
 }
@@ -102,27 +126,66 @@ body {
   font-weight: 300;
   font-size: 0.9rem;
 }
-.main-content .card-column.col-12 .card {
-  height: 300px;
+.main-content .content .card {
+  height: 400px;
   overflow-y: auto;
+  overflow-x: hidden;
 }
-.main-content .card-column.col-12 .card .toggler-icon {
-  color: gray;
+.main-content .content .card .card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.main-content .content .card .card-header .head-link {
   text-decoration: none;
-  font-size: 1.25rem;
+  font-size: 1rem;
 }
-.main-content .card-column.col-12 .card .card-body .subsidiaries-nav .sub-item {
-  background-color: rgb(236, 236, 236);
-  margin: 0.5rem auto;
-  padding: 0.5rem;
+.main-content .content .card .card-body {
+  position: relative;
+}
+.main-content .content .card .card-body h3 {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+.main-content .content .card .card-body p {
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: gray;
+}
+.main-content .content .card .card-body .search-info {
+  background-color: rgb(251, 251, 251);
+  border-radius: 0.25rem;
+  text-decoration: none;
+  color: gray;
+  transition: 0.3s ease-in-out;
+  margin: 0.5rem 0;
+}
+.main-content .content .card .card-body .search-info:hover {
+  background-color: rgb(231, 231, 231);
+  transition: 0.3s ease-in-out;
+}
+.main-content .content .card .card-body .link-container {
+  background-color: rgb(251, 251, 251);
+  padding: 0.5rem 1rem;
   border-radius: 0.25rem;
 }
-.main-content .card-column.col-12 .card .card-body .subsidiaries-nav .sub-item .sub-link {
-  color: black;
-  text-decoration: none;
+.main-content .content .card .card-body .link-container .nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-.main-content .card-column.col-12 .card .card-body .subsidiaries-nav .sub-item .sub-link img {
-  width: 15%;
+.main-content .content .card .card-body .link-container .nav-link i {
+  font-size: 1.25rem;
+}
+.main-content .content .card .card-body .dashboard-section {
+  height: 100%;
+}
+.main-content .content .card .card-body .dashboard-section canvas {
+  position: absolute;
+  top: 10;
+  left: 10;
+  width: 100%;
+  height: 100%;
 }
 
 @media screen and (min-width: 576px) {
@@ -137,8 +200,12 @@ body {
 }
 @media screen and (min-width: 992px) {
   .main-content {
-    margin-left: 245px;
-    width: calc(100% - 245px);
+    margin-left: 280px;
+    padding-right: 50px;
+    width: calc(100% - 280px);
+  }
+  .main-content .navbar {
+    border-bottom: 0;
   }
   .main-content .navbar .navbar-brand {
     display: none;
@@ -146,7 +213,7 @@ body {
   .main-content .navbar form {
     background-color: rgb(246, 246, 246);
     border-radius: 0.25rem;
-    width: 50%;
+    width: 100%;
   }
   .main-content .navbar form .btn {
     background-color: transparent;
@@ -180,7 +247,10 @@ body {
   .main-content .navbar .navbar-nav .nav-item .nav-link {
     display: none;
   }
-  .main-content .card-column.col-12 .card .card-body .subsidiaries-nav .sub-item .sub-link img {
-    width: 10%;
+  .main-content .content .card .card-body h3 {
+    font-size: 2.5rem;
+  }
+  .main-content .content .card .card-body p {
+    font-size: 1rem;
   }
 }/*# sourceMappingURL=dashboard.css.map */

@@ -1,0 +1,23 @@
+@import "variable";
+
+// style
+
+// card style
+
+.card {
+  border: 0.5px solid lightgray;
+  color: black;
+  font-weight: 300;
+  border-radius: 0.25rem;
+
+  .card-header {
+    .title-card {
+      font-size: 1.25rem;
+      font-weight: 300;
+    }
+  }
+}
+
+.ri-arrow-up-s-fill {
+  color: green;
+}

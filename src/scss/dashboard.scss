@@ -1,5 +1,6 @@
 @import "variable";
 @import "sidebar";
+@import "component";
 
 .main-content {
   overflow-x: hidden;
@@ -39,32 +40,69 @@
     font-size: 0.9rem;
   }
 
-  .card-column {
-    &.col-12 {
-      .card {
-        height: 300px;
-        overflow-y: auto;
-        .toggler-icon {
-          color: gray;
+  .content {
+    .card {
+      height: 400px;
+      overflow-y: auto;
+      overflow-x: hidden;
+
+      .card-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .head-link {
           text-decoration: none;
-          font-size: 1.25rem;
+          font-size: 1rem;
+        }
+      }
+
+      .card-body {
+        position: relative;
+        h3 {
+          font-size: 1.5rem;
+          font-weight: 300;
+        }
+        p {
+          font-size: 0.9rem;
+          font-weight: 300;
+          color: gray;
         }
 
-        .card-body {
-          .subsidiaries-nav {
-            .sub-item {
-              background-color: rgb(236, 236, 236);
-              margin: 0.5rem auto;
-              padding: 0.5rem;
-              border-radius: 0.25rem;
-              .sub-link {
-                color: black;
-                text-decoration: none;
-                img {
-                  width: 15%;
-                }
-              }
+        .search-info {
+          background-color: rgb(251, 251, 251);
+          border-radius: 0.25rem;
+          text-decoration: none;
+          color: gray;
+          transition: 0.3s ease-in-out;
+          margin: 0.5rem 0;
+          &:hover {
+            background-color: rgb(231, 231, 231);
+            transition: 0.3s ease-in-out;
+          }
+        }
+
+        .link-container {
+          background-color: rgb(251, 251, 251);
+          padding: 0.5rem 1rem;
+          border-radius: 0.25rem;
+          .nav-link {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            i {
+              font-size: 1.25rem;
             }
+          }
+        }
+
+        .dashboard-section {
+          height: 100%;
+          canvas {
+            position: absolute;
+            top: 10;
+            left: 10;
+            width: 100%;
+            height: 100%;
           }
         }
       }
@@ -100,9 +138,11 @@
 
 @media screen and (min-width: 992px) {
   .main-content {
-    margin-left: 245px;
-    width: calc(100% - 245px);
+    margin-left: 280px;
+    padding-right: 50px;
+    width: calc(100% - 280px);
     .navbar {
+      border-bottom: 0;
       .navbar-brand {
         display: none;
       }
@@ -110,7 +150,7 @@
       form {
         background-color: rgb(246, 246, 246);
         border-radius: 0.25rem;
-        width: 50%;
+        width: 100%;
         .btn {
           background-color: transparent;
           border: 0;
@@ -151,19 +191,14 @@
       }
     }
 
-    .card-column {
-      &.col-12 {
-        .card {
-          .card-body {
-            .subsidiaries-nav {
-              .sub-item {
-                .sub-link {
-                  img {
-                    width: 10%;
-                  }
-                }
-              }
-            }
+    .content {
+      .card {
+        .card-body {
+          h3 {
+            font-size: 2.5rem;
+          }
+          p {
+            font-size: 1rem;
           }
         }
       }
