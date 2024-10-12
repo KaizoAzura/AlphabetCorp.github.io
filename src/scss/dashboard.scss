@@ -2,6 +2,10 @@
 @import "sidebar";
 @import "component";
 
+.offcanvas {
+  overflow-y: auto;
+}
+
 .main-content {
   overflow-x: hidden;
   .navbar {

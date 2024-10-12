@@ -19,6 +19,17 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
   <body>
+    <!-- offcanvas -->
+    <div
+      class="offcanvas offcanvas-end"
+      tabindex="-1"
+      id="offcanvasFeedback"
+      aria-labelledby="offcanvasFeedbackLabel"
+    >
+      <div id="offcanvas-content"></div>
+    </div>
+    <!-- end offcanvas -->
+
     <!-- sisi 1 -->
     <div class="sidebar fixed-top py-4 pe-2 ps-0">
       <div class="container-fluid ps-0">
@@ -38,38 +49,38 @@
                 >
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link"
+                <a href="subsidiary.html" class="nav-link"
                   ><i class="ri-building-fill"></i>Subsidiary</a
                 >
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link"
+                <a href="blacklist.html" class="nav-link"
                   ><i class="ri-spam-3-fill"></i>Blacklist</a
                 >
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link"
+                <a href="portfolio.html" class="nav-link"
                   ><i class="ri-file-paper-2-fill"></i>Portfolio</a
                 >
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link"
+                <a href="career.html" class="nav-link"
                   ><i class="ri-briefcase-fill"></i>Career</a
                 >
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link"
+                <a href="news.html" class="nav-link"
                   ><i class="ri-newspaper-fill"></i>News</a
                 >
               </li>
               <hr />
               <li class="nav-item">
-                <a href="#" class="nav-link"
+                <a href="help.html" class="nav-link"
                   ><i class="ri-question-fill"></i>Help</a
                 >
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link"
+                <a href="account.html" class="nav-link"
                   ><i class="ri-account-circle-fill"></i>Account</a
                 >
               </li>
@@ -168,7 +179,7 @@
             <div class="card">
               <div class="card-header bg-transparent">
                 <h4 class="mb-0 title-card">Subsidiary</h4>
-                <a href="#" class="head-link">View more</a>
+                <a href="subsidiary.html" class="head-link">View more</a>
               </div>
               <div class="card-body px-1">
                 <div class="row px-4">
@@ -280,6 +291,8 @@
                     ></a>
                     <a
                       href="#"
+                      data-bs-toggle="offcanvas"
+                      data-bs-target="#offcanvasFeedback"
                       class="d-flex align-items-center justify-content-between px-3 py-2 search-info"
                       ><span
                         ><i class="ri-feedback-line me-3"></i>Send
@@ -312,5 +325,6 @@
     ></script>
     <script src="src/js/script.js"></script>
     <script src="src/js/chart.js"></script>
+    <script src="src/js/call.js"></script>
   </body>
 </html>
